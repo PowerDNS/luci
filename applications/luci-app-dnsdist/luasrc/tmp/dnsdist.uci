@@ -1,0 +1,13 @@
+
+config dnsdist 'general'
+	option listen_port '57'
+	option enabled '1'
+
+config pool 'quad9'
+	option enabled '1'
+	list server '9.9.9.9:853'
+	list server '149.112.112.112:853'
+	list server '[2620:fe::fe]:853'
+	list server '[2620:fe::9]:853'
+	option tls '1'
+
