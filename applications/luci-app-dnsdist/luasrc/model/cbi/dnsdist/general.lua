@@ -16,7 +16,11 @@ pools.addremove = true
 
 local penabled = pools:option(Flag, "enabled", "Enabled", "Whether this pool is enabled")
 penabled.rmempty = false
-local ptls = pools:option(Flag, "tls", "DoT", "Whether DoT is used to this pool")
+local ptls = pools:option(Flag, "tls", "DoT", "Whether DoT is used to this pool (")
+-- 20:06:55         ph1 | see a normal person might not even notice
+-- 20:07:06         ph1 | but my thought is, oh you are enabled DoT for clients based on that checkbox
+-- 20:07:14         ph1 | until I saw the server list and realized, no, probably not
+
 ptls.rmempty = false
 local pservers = pools:option(DynamicList, "server", "servers")
 pservers.rmempty = false
